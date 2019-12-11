@@ -2,11 +2,10 @@
 //  ViewController.swift
 //  DebtTracker
 //
-//  Created by Rico Chao on 2019-12-10.
+//  Created by Rico Chao on 2019-12-11.
 //  Copyright © 2019 Rico Chao. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,9 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func loginTapped(_ sender: Any) {
-    }
-    
-    
+
 }
 

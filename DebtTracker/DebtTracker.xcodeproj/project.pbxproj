@@ -7,27 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		418EE80523A0A1E400309BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE80423A0A1E400309BD4 /* AppDelegate.swift */; };
-		418EE80723A0A1E400309BD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE80623A0A1E400309BD4 /* SceneDelegate.swift */; };
-		418EE80923A0A1E400309BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE80823A0A1E400309BD4 /* ViewController.swift */; };
-		418EE80C23A0A1E400309BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418EE80A23A0A1E400309BD4 /* Main.storyboard */; };
-		418EE80E23A0A1E700309BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418EE80D23A0A1E700309BD4 /* Assets.xcassets */; };
-		418EE81123A0A1E700309BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418EE80F23A0A1E700309BD4 /* LaunchScreen.storyboard */; };
+		418EE82D23A1B24F00309BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE82C23A1B24F00309BD4 /* AppDelegate.swift */; };
+		418EE82F23A1B24F00309BD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */; };
+		418EE83123A1B24F00309BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE83023A1B24F00309BD4 /* ViewController.swift */; };
+		418EE83423A1B24F00309BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418EE83223A1B24F00309BD4 /* Main.storyboard */; };
+		418EE83723A1B24F00309BD4 /* DebtTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 418EE83523A1B24F00309BD4 /* DebtTracker.xcdatamodeld */; };
+		418EE83923A1B25000309BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418EE83823A1B25000309BD4 /* Assets.xcassets */; };
+		418EE83C23A1B25000309BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418EE83A23A1B25000309BD4 /* LaunchScreen.storyboard */; };
+		418EE84823A1B2B900309BD4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE84723A1B2B900309BD4 /* Profile.swift */; };
+		418EE84C23A1B4E400309BD4 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE84B23A1B4E400309BD4 /* LinkedList.swift */; };
+		418EE84E23A1B55B00309BD4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE84D23A1B55B00309BD4 /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		418EE80123A0A1E400309BD4 /* DebtTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebtTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		418EE80423A0A1E400309BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		418EE80623A0A1E400309BD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		418EE80823A0A1E400309BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		418EE80B23A0A1E400309BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		418EE80D23A0A1E700309BD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		418EE81023A0A1E700309BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		418EE81223A0A1E700309BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		418EE82923A1B24F00309BD4 /* DebtTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebtTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		418EE82C23A1B24F00309BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		418EE83023A1B24F00309BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		418EE83323A1B24F00309BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		418EE83623A1B24F00309BD4 /* DebtTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DebtTracker.xcdatamodel; sourceTree = "<group>"; };
+		418EE83823A1B25000309BD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		418EE83B23A1B25000309BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		418EE83D23A1B25000309BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		418EE84723A1B2B900309BD4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		418EE84B23A1B4E400309BD4 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		418EE84D23A1B55B00309BD4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		418EE7FE23A0A1E400309BD4 /* Frameworks */ = {
+		418EE82623A1B24F00309BD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,46 +45,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		418EE7F823A0A1E400309BD4 = {
+		418EE82023A1B24F00309BD4 = {
 			isa = PBXGroup;
 			children = (
-				418EE80323A0A1E400309BD4 /* DebtTracker */,
-				418EE80223A0A1E400309BD4 /* Products */,
+				418EE82B23A1B24F00309BD4 /* DebtTracker */,
+				418EE82A23A1B24F00309BD4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		418EE80223A0A1E400309BD4 /* Products */ = {
+		418EE82A23A1B24F00309BD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				418EE80123A0A1E400309BD4 /* DebtTracker.app */,
+				418EE82923A1B24F00309BD4 /* DebtTracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		418EE80323A0A1E400309BD4 /* DebtTracker */ = {
+		418EE82B23A1B24F00309BD4 /* DebtTracker */ = {
 			isa = PBXGroup;
 			children = (
-				418EE80423A0A1E400309BD4 /* AppDelegate.swift */,
-				418EE80623A0A1E400309BD4 /* SceneDelegate.swift */,
-				418EE80823A0A1E400309BD4 /* ViewController.swift */,
-				418EE80A23A0A1E400309BD4 /* Main.storyboard */,
-				418EE80D23A0A1E700309BD4 /* Assets.xcassets */,
-				418EE80F23A0A1E700309BD4 /* LaunchScreen.storyboard */,
-				418EE81223A0A1E700309BD4 /* Info.plist */,
+				418EE84423A1B28F00309BD4 /* ViewController */,
+				418EE84323A1B28A00309BD4 /* Model */,
+				418EE82C23A1B24F00309BD4 /* AppDelegate.swift */,
+				418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */,
+				418EE83023A1B24F00309BD4 /* ViewController.swift */,
+				418EE83223A1B24F00309BD4 /* Main.storyboard */,
+				418EE83823A1B25000309BD4 /* Assets.xcassets */,
+				418EE83A23A1B25000309BD4 /* LaunchScreen.storyboard */,
+				418EE83D23A1B25000309BD4 /* Info.plist */,
+				418EE83523A1B24F00309BD4 /* DebtTracker.xcdatamodeld */,
 			);
 			path = DebtTracker;
+			sourceTree = "<group>";
+		};
+		418EE84323A1B28A00309BD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				418EE84723A1B2B900309BD4 /* Profile.swift */,
+				418EE84B23A1B4E400309BD4 /* LinkedList.swift */,
+				418EE84D23A1B55B00309BD4 /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		418EE84423A1B28F00309BD4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		418EE80023A0A1E400309BD4 /* DebtTracker */ = {
+		418EE82823A1B24F00309BD4 /* DebtTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 418EE81523A0A1E700309BD4 /* Build configuration list for PBXNativeTarget "DebtTracker" */;
+			buildConfigurationList = 418EE84023A1B25000309BD4 /* Build configuration list for PBXNativeTarget "DebtTracker" */;
 			buildPhases = (
-				418EE7FD23A0A1E400309BD4 /* Sources */,
-				418EE7FE23A0A1E400309BD4 /* Frameworks */,
-				418EE7FF23A0A1E400309BD4 /* Resources */,
+				418EE82523A1B24F00309BD4 /* Sources */,
+				418EE82623A1B24F00309BD4 /* Frameworks */,
+				418EE82723A1B24F00309BD4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +112,25 @@
 			);
 			name = DebtTracker;
 			productName = DebtTracker;
-			productReference = 418EE80123A0A1E400309BD4 /* DebtTracker.app */;
+			productReference = 418EE82923A1B24F00309BD4 /* DebtTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		418EE7F923A0A1E400309BD4 /* Project object */ = {
+		418EE82123A1B24F00309BD4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Rico Chao";
 				TargetAttributes = {
-					418EE80023A0A1E400309BD4 = {
+					418EE82823A1B24F00309BD4 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 418EE7FC23A0A1E400309BD4 /* Build configuration list for PBXProject "DebtTracker" */;
+			buildConfigurationList = 418EE82423A1B24F00309BD4 /* Build configuration list for PBXProject "DebtTracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +138,59 @@
 				en,
 				Base,
 			);
-			mainGroup = 418EE7F823A0A1E400309BD4;
-			productRefGroup = 418EE80223A0A1E400309BD4 /* Products */;
+			mainGroup = 418EE82023A1B24F00309BD4;
+			productRefGroup = 418EE82A23A1B24F00309BD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				418EE80023A0A1E400309BD4 /* DebtTracker */,
+				418EE82823A1B24F00309BD4 /* DebtTracker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		418EE7FF23A0A1E400309BD4 /* Resources */ = {
+		418EE82723A1B24F00309BD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418EE81123A0A1E700309BD4 /* LaunchScreen.storyboard in Resources */,
-				418EE80E23A0A1E700309BD4 /* Assets.xcassets in Resources */,
-				418EE80C23A0A1E400309BD4 /* Main.storyboard in Resources */,
+				418EE83C23A1B25000309BD4 /* LaunchScreen.storyboard in Resources */,
+				418EE83923A1B25000309BD4 /* Assets.xcassets in Resources */,
+				418EE83423A1B24F00309BD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		418EE7FD23A0A1E400309BD4 /* Sources */ = {
+		418EE82523A1B24F00309BD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418EE80923A0A1E400309BD4 /* ViewController.swift in Sources */,
-				418EE80523A0A1E400309BD4 /* AppDelegate.swift in Sources */,
-				418EE80723A0A1E400309BD4 /* SceneDelegate.swift in Sources */,
+				418EE84E23A1B55B00309BD4 /* Transaction.swift in Sources */,
+				418EE83123A1B24F00309BD4 /* ViewController.swift in Sources */,
+				418EE84823A1B2B900309BD4 /* Profile.swift in Sources */,
+				418EE82D23A1B24F00309BD4 /* AppDelegate.swift in Sources */,
+				418EE82F23A1B24F00309BD4 /* SceneDelegate.swift in Sources */,
+				418EE83723A1B24F00309BD4 /* DebtTracker.xcdatamodeld in Sources */,
+				418EE84C23A1B4E400309BD4 /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		418EE80A23A0A1E400309BD4 /* Main.storyboard */ = {
+		418EE83223A1B24F00309BD4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				418EE80B23A0A1E400309BD4 /* Base */,
+				418EE83323A1B24F00309BD4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		418EE80F23A0A1E700309BD4 /* LaunchScreen.storyboard */ = {
+		418EE83A23A1B25000309BD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				418EE81023A0A1E700309BD4 /* Base */,
+				418EE83B23A1B25000309BD4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +198,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		418EE81323A0A1E700309BD4 /* Debug */ = {
+		418EE83E23A1B25000309BD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +258,7 @@
 			};
 			name = Debug;
 		};
-		418EE81423A0A1E700309BD4 /* Release */ = {
+		418EE83F23A1B25000309BD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +312,7 @@
 			};
 			name = Release;
 		};
-		418EE81623A0A1E700309BD4 /* Debug */ = {
+		418EE84123A1B25000309BD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,7 +330,7 @@
 			};
 			name = Debug;
 		};
-		418EE81723A0A1E700309BD4 /* Release */ = {
+		418EE84223A1B25000309BD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -319,25 +351,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		418EE7FC23A0A1E400309BD4 /* Build configuration list for PBXProject "DebtTracker" */ = {
+		418EE82423A1B24F00309BD4 /* Build configuration list for PBXProject "DebtTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				418EE81323A0A1E700309BD4 /* Debug */,
-				418EE81423A0A1E700309BD4 /* Release */,
+				418EE83E23A1B25000309BD4 /* Debug */,
+				418EE83F23A1B25000309BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		418EE81523A0A1E700309BD4 /* Build configuration list for PBXNativeTarget "DebtTracker" */ = {
+		418EE84023A1B25000309BD4 /* Build configuration list for PBXNativeTarget "DebtTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				418EE81623A0A1E700309BD4 /* Debug */,
-				418EE81723A0A1E700309BD4 /* Release */,
+				418EE84123A1B25000309BD4 /* Debug */,
+				418EE84223A1B25000309BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		418EE83523A1B24F00309BD4 /* DebtTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				418EE83623A1B24F00309BD4 /* DebtTracker.xcdatamodel */,
+			);
+			currentVersion = 418EE83623A1B24F00309BD4 /* DebtTracker.xcdatamodel */;
+			path = DebtTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 418EE7F923A0A1E400309BD4 /* Project object */;
+	rootObject = 418EE82123A1B24F00309BD4 /* Project object */;
 }
