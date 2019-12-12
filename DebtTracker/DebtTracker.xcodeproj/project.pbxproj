@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		418EE82D23A1B24F00309BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE82C23A1B24F00309BD4 /* AppDelegate.swift */; };
 		418EE82F23A1B24F00309BD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */; };
-		418EE83123A1B24F00309BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE83023A1B24F00309BD4 /* ViewController.swift */; };
+		418EE83123A1B24F00309BD4 /* ProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE83023A1B24F00309BD4 /* ProfileList.swift */; };
 		418EE83423A1B24F00309BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418EE83223A1B24F00309BD4 /* Main.storyboard */; };
 		418EE83723A1B24F00309BD4 /* DebtTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 418EE83523A1B24F00309BD4 /* DebtTracker.xcdatamodeld */; };
 		418EE83923A1B25000309BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418EE83823A1B25000309BD4 /* Assets.xcassets */; };
@@ -17,13 +17,14 @@
 		418EE84823A1B2B900309BD4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE84723A1B2B900309BD4 /* Profile.swift */; };
 		418EE84C23A1B4E400309BD4 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE84B23A1B4E400309BD4 /* LinkedList.swift */; };
 		418EE84E23A1B55B00309BD4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE84D23A1B55B00309BD4 /* Transaction.swift */; };
+		418EE87623A23C4900309BD4 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE87523A23C4900309BD4 /* ProfileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		418EE82923A1B24F00309BD4 /* DebtTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebtTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418EE82C23A1B24F00309BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		418EE83023A1B24F00309BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		418EE83023A1B24F00309BD4 /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
 		418EE83323A1B24F00309BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		418EE83623A1B24F00309BD4 /* DebtTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DebtTracker.xcdatamodel; sourceTree = "<group>"; };
 		418EE83823A1B25000309BD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		418EE84723A1B2B900309BD4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		418EE84B23A1B4E400309BD4 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		418EE84D23A1B55B00309BD4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		418EE87523A23C4900309BD4 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +66,11 @@
 		418EE82B23A1B24F00309BD4 /* DebtTracker */ = {
 			isa = PBXGroup;
 			children = (
-				418EE84423A1B28F00309BD4 /* ViewController */,
-				418EE84323A1B28A00309BD4 /* Model */,
 				418EE82C23A1B24F00309BD4 /* AppDelegate.swift */,
 				418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */,
-				418EE83023A1B24F00309BD4 /* ViewController.swift */,
+				418EE87223A22F9600309BD4 /* View */,
+				418EE84423A1B28F00309BD4 /* ViewController */,
+				418EE84323A1B28A00309BD4 /* Model */,
 				418EE83223A1B24F00309BD4 /* Main.storyboard */,
 				418EE83823A1B25000309BD4 /* Assets.xcassets */,
 				418EE83A23A1B25000309BD4 /* LaunchScreen.storyboard */,
@@ -91,8 +93,17 @@
 		418EE84423A1B28F00309BD4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				418EE83023A1B24F00309BD4 /* ProfileList.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		418EE87223A22F9600309BD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				418EE87523A23C4900309BD4 /* ProfileCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				418EE84E23A1B55B00309BD4 /* Transaction.swift in Sources */,
-				418EE83123A1B24F00309BD4 /* ViewController.swift in Sources */,
+				418EE83123A1B24F00309BD4 /* ProfileList.swift in Sources */,
 				418EE84823A1B2B900309BD4 /* Profile.swift in Sources */,
 				418EE82D23A1B24F00309BD4 /* AppDelegate.swift in Sources */,
 				418EE82F23A1B24F00309BD4 /* SceneDelegate.swift in Sources */,
+				418EE87623A23C4900309BD4 /* ProfileCell.swift in Sources */,
 				418EE83723A1B24F00309BD4 /* DebtTracker.xcdatamodeld in Sources */,
 				418EE84C23A1B4E400309BD4 /* LinkedList.swift in Sources */,
 			);

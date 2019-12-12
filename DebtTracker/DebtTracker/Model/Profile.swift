@@ -14,16 +14,28 @@ class Profile {
     
     var totalAmount: Int
     
-    //var transactionArr: [Transaction]
+    var transactionArr: [Transaction]
     
     init() {
         name = ""
         totalAmount = 0
+        transactionArr = [Transaction]()
     }
     
     init(name: String, totalAmt: Int) {
         self.name = name
         self.totalAmount = totalAmt
+        transactionArr = [Transaction]()
+    }
+    
+    func addDetails(amount: Int, detail: String) {
+        if transactionArr.count > 0 {
+            transactionArr[transactionArr.count-1].setAmt(amount: amount)
+            transactionArr[transactionArr.count-1].setDetail(detail: detail)
+        }else {
+            transactionArr[0].setAmt(amount: amount)
+            transactionArr[0].setDetail(detail: detail)
+        }
     }
     
     func getName() -> String {
