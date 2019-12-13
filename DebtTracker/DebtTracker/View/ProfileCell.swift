@@ -17,11 +17,7 @@ class ProfileCell: UITableViewCell {
     
     func setProfile(profile: Profile) {
         nameLabel.text = profile.getName()
-        totalAmtLabel.text = String(profile.getTotalAmt())
-    }
-
-    
-    @IBAction func editPressed(_ sender: UIButton) {
+        totalAmtLabel.text = "$" + String(profile.getTotalAmt())
     }
     
 }
