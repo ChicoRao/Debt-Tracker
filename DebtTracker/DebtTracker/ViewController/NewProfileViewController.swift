@@ -40,9 +40,11 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         //Setting max length for amount field
         amountField.delegate = self
         
-        //Setting default button text
+        //Setting default button text (Default: others owe you)
         whoOwesWhoButton.setTitle("+", for: .normal)
         
+        //For light mode
+        overrideUserInterfaceStyle = .light
     }
     
     //  Function for dismissing keyboard

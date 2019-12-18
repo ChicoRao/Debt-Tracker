@@ -18,8 +18,8 @@ class ProfileList: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.reloadData()
-        
+        //For light mode
+        overrideUserInterfaceStyle = .light
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +37,8 @@ class ProfileList: UIViewController {
 
         //3
         do {
-            profileList = try managedContext.fetch(fetchRequest)
+            profileList = try managedContext.fetch(fetchRequest)    //fetching data from core data
+            tableView.reloadData()  //reload table to updated data will be added as rows
 
         } catch let error as NSError {
             print("Cout not fetch. \(error), \(error.userInfo)")
@@ -58,14 +59,16 @@ extension ProfileList: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
         
         cell.nameLabel?.text = profile.value(forKeyPath: "name") as? String
-        cell.totalAmtLabel?.text = profile.value(forKeyPath: "totalAmount") as? String
+        let amount = profile.value(forKeyPath: "totalAmount") as? String
         
         let isPositive: Bool = profile.value(forKeyPath: "isPositive") as? Bool ?? true
         
         if isPositive {
-            cell.totalAmtLabel?.textColor = UIColor.green
+            cell.totalAmtLabel?.textColor = UIColor(red: 0.251, green: 0.6275, blue: 0, alpha: 1)  //show green for what others owe you
+            cell.totalAmtLabel?.text = "+" + (amount ?? "$0.00")
         }else {
-            cell.totalAmtLabel?.textColor = UIColor.red
+            cell.totalAmtLabel?.textColor = UIColor.red //show red for what you owe others
+            cell.totalAmtLabel?.text = "-" + (amount ?? "$0.00")
         }
         
         return cell
@@ -77,28 +80,12 @@ extension ProfileList: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-
-           
-//            profileList.remove(at: indexPath.row)
-//
-//            tableView.deleteRows(at: [indexPath], with: .fade)
             
             let profile = profileList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)  //swipe delete
             guard let moc = profile.managedObjectContext else {return}
             moc.delete(profile)
-            moc.processPendingChanges()
-            
-            
-//            let commit = profileList[indexPath.row]
-//            container.viewContext.delete(commit)
-//            profileList.remove(at: indexPath.row)
-//
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//
-//            managedContext.save()
-            
-
+            moc.processPendingChanges() //saves deleted changes to core data
 
         }else if editingStyle == .insert {
             //new instance in array and insert it into tableView (new row)
