@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="pqv-Bp-7Bh">
-                                <rect key="frame" x="20" y="234" width="322.66666666666669" height="34"/>
+                                <rect key="frame" x="20" y="234" width="345" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8A-EP-CY8">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="34"/>
@@ -123,7 +123,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIW-L2-L6w">
-                                        <rect key="frame" x="77.999999999999986" y="0.0" width="244.66666666666663" height="34"/>
+                                        <rect key="frame" x="78" y="0.0" width="267" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="jx8-EO-cst"/>
                                         </constraints>
@@ -131,8 +131,8 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="nameEditDidEnd:" destination="wfu-XP-9I8" eventType="editingDidEnd" id="MU7-rg-so2"/>
+                                            <action selector="nameEditingChanged:" destination="btJ-6e-V05" eventType="editingDidEnd" id="g9X-W0-VHH"/>
                                             <action selector="nameEditingDidEnd:" destination="wfu-XP-9I8" eventType="editingDidEnd" id="Xxc-56-35K"/>
-                                            <action selector="nameEditingDidEnd:" destination="btJ-6e-V05" eventType="editingDidEnd" id="fsl-bX-Dm6"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -143,11 +143,11 @@
                                     <constraint firstItem="k8A-EP-CY8" firstAttribute="top" secondItem="pqv-Bp-7Bh" secondAttribute="top" id="zWb-vi-hsc"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QE2-QW-9il">
-                                <rect key="frame" x="20" y="318" width="168" height="34"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HDI-4H-HVx">
+                                <rect key="frame" x="20" y="318" width="234" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skc-UW-Cs2">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="uIc-SW-yfe"/>
                                         </constraints>
@@ -156,25 +156,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="in5-U6-Fgk" customClass="AmountField" customModule="DebtTracker" customModuleProvider="target">
-                                        <rect key="frame" x="78" y="0.0" width="90" height="34"/>
+                                        <rect key="frame" x="78" y="0.0" width="90" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="04Z-yQ-uiV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
-                                            <action selector="amountEditingDidEnd:" destination="btJ-6e-V05" eventType="editingDidEnd" id="COi-82-hgp"/>
+                                            <action selector="amountEditingChanged:" destination="btJ-6e-V05" eventType="editingChanged" id="mzh-Nf-fHk"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEQ-to-g5b">
+                                        <rect key="frame" x="176" y="0.0" width="58" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="whoOwesWhoButtonAction:" destination="btJ-6e-V05" eventType="touchUpInside" id="bhg-ip-GS0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="skc-UW-Cs2" firstAttribute="leading" secondItem="QE2-QW-9il" secondAttribute="leading" id="aMz-8e-j9l"/>
-                                    <constraint firstItem="skc-UW-Cs2" firstAttribute="top" secondItem="QE2-QW-9il" secondAttribute="top" id="jx4-56-vmY"/>
-                                    <constraint firstAttribute="bottom" secondItem="skc-UW-Cs2" secondAttribute="bottom" id="zKw-nd-gzf"/>
+                                    <constraint firstAttribute="bottom" secondItem="CEQ-to-g5b" secondAttribute="bottom" id="HZR-Bu-g6H"/>
+                                    <constraint firstItem="CEQ-to-g5b" firstAttribute="leading" secondItem="in5-U6-Fgk" secondAttribute="trailing" constant="8" id="VAu-QH-mC0"/>
+                                    <constraint firstItem="CEQ-to-g5b" firstAttribute="top" secondItem="HDI-4H-HVx" secondAttribute="top" id="YAO-9u-uNr"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kwv-Bd-t0K">
-                                <rect key="frame" x="20" y="402" width="322.66666666666669" height="34"/>
+                                <rect key="frame" x="20" y="404" width="345" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occasion: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u46-Gw-hUE">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
@@ -186,14 +194,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-rg-XBW">
-                                        <rect key="frame" x="87.999999999999986" y="0.0" width="234.66666666666663" height="34"/>
+                                        <rect key="frame" x="88" y="0.0" width="257" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="ESu-7m-I0a"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="occasionEditingDidEnd:" destination="btJ-6e-V05" eventType="editingDidEnd" id="Mnw-z4-00J"/>
+                                            <action selector="occasionEditingChanged:" destination="btJ-6e-V05" eventType="editingChanged" id="ntl-I0-wAK"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -205,13 +213,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUc-SL-6SO">
-                                <rect key="frame" x="109.99999999999999" y="118" width="132.66666666666663" height="36"/>
+                                <rect key="frame" x="110" y="118" width="155" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ado-SA-iXu">
-                                <rect key="frame" x="153" y="486" width="69.666666666666686" height="48"/>
+                                <rect key="frame" x="153" y="488" width="92" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -222,9 +230,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="pqv-Bp-7Bh" secondAttribute="trailing" constant="10" id="4uU-wa-xMX"/>
+                            <constraint firstItem="Kwv-Bd-t0K" firstAttribute="top" secondItem="HDI-4H-HVx" secondAttribute="bottom" constant="50" id="5cI-Bs-JAd"/>
+                            <constraint firstItem="HDI-4H-HVx" firstAttribute="top" secondItem="pqv-Bp-7Bh" secondAttribute="bottom" constant="50" id="9k8-Q8-rgZ"/>
                             <constraint firstAttribute="trailing" secondItem="Kwv-Bd-t0K" secondAttribute="trailing" constant="10" id="BMK-Lt-CL0"/>
                             <constraint firstItem="Ado-SA-iXu" firstAttribute="leading" secondItem="OPi-27-QsN" secondAttribute="leading" constant="153" id="Gbl-kF-rhs"/>
-                            <constraint firstItem="QE2-QW-9il" firstAttribute="leading" secondItem="OPi-27-QsN" secondAttribute="leading" constant="20" id="Lxb-Hs-aza"/>
                             <constraint firstItem="Ado-SA-iXu" firstAttribute="top" secondItem="Kwv-Bd-t0K" secondAttribute="bottom" constant="50" id="PNR-Tk-r1t"/>
                             <constraint firstItem="pqv-Bp-7Bh" firstAttribute="leading" secondItem="OPi-27-QsN" secondAttribute="leading" constant="20" id="Q0a-IW-uoF"/>
                             <constraint firstItem="Kwv-Bd-t0K" firstAttribute="leading" secondItem="OPi-27-QsN" secondAttribute="leading" constant="20" id="Syo-HG-yZI"/>
@@ -232,8 +241,7 @@
                             <constraint firstItem="zUc-SL-6SO" firstAttribute="leading" secondItem="OPi-27-QsN" secondAttribute="leading" constant="110" id="cpH-AA-XJ5"/>
                             <constraint firstItem="zUc-SL-6SO" firstAttribute="top" secondItem="OPi-27-QsN" secondAttribute="top" constant="30" id="j6l-fB-qDG"/>
                             <constraint firstItem="OPi-27-QsN" firstAttribute="trailing" secondItem="Ado-SA-iXu" secondAttribute="trailing" constant="130" id="j7d-FH-GJe"/>
-                            <constraint firstItem="Kwv-Bd-t0K" firstAttribute="top" secondItem="QE2-QW-9il" secondAttribute="bottom" constant="50" id="lpB-Vd-Rlp"/>
-                            <constraint firstItem="QE2-QW-9il" firstAttribute="top" secondItem="pqv-Bp-7Bh" secondAttribute="bottom" constant="50" id="lqy-8g-DQ8"/>
+                            <constraint firstItem="HDI-4H-HVx" firstAttribute="leading" secondItem="OPi-27-QsN" secondAttribute="leading" constant="20" id="tMb-Nc-8Pq"/>
                             <constraint firstItem="pqv-Bp-7Bh" firstAttribute="top" secondItem="zUc-SL-6SO" secondAttribute="bottom" constant="80" id="urH-ah-T5y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OPi-27-QsN"/>
@@ -243,6 +251,7 @@
                         <outlet property="amountField" destination="in5-U6-Fgk" id="i8v-5q-epF"/>
                         <outlet property="nameTextField" destination="yIW-L2-L6w" id="VKw-0A-OEd"/>
                         <outlet property="occasionTextField" destination="Cb9-rg-XBW" id="T95-Bw-Fgb"/>
+                        <outlet property="whoOwesWhoButton" destination="CEQ-to-g5b" id="HZB-3l-gku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHJ-zV-5OR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

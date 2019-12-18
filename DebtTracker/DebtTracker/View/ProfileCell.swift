@@ -15,9 +15,9 @@ class ProfileCell: UITableViewCell {
     
     @IBOutlet weak var totalAmtLabel: UILabel!
     
-    func setProfile(profile: Profile) {
-        nameLabel.text = profile.getName()
-        totalAmtLabel.text = "$" + String(profile.getTotalAmt())
-    }
+//    func setProfile(profile: Profile) {
+//        nameLabel.text = profile.getName()
+//        totalAmtLabel.text = "$" + String(profile.getTotalAmt())
+//    }
     
 }

@@ -8,51 +8,50 @@
 
 import Foundation
 
-class Profile {
-    
-    var name: String
-    
-    var totalAmount: Int
-    
-    var transactionArr: [Transaction]
-    
-    init() {
-        name = ""
-        totalAmount = 0
-        transactionArr = [Transaction]()
-    }
-    
-    init(name: String, totalAmt: Int) {
-        self.name = name
-        self.totalAmount = totalAmt
-        transactionArr = [Transaction]()
-    }
-    
-    func addDetails(amount: Int, detail: String) {
-        if transactionArr.count > 0 {
-            transactionArr[transactionArr.count-1].setAmt(amount: amount)
-            transactionArr[transactionArr.count-1].setDetail(detail: detail)
-        }else {
-            transactionArr[0].setAmt(amount: amount)
-            transactionArr[0].setDetail(detail: detail)
-        }
-    }
-    
-    func getName() -> String {
-        return name
-    }
-    
-    func getTotalAmt() -> Int {
-        return totalAmount
-    }
-    
-    func setName(name: String) {
-        self.name = name
-    }
-    
-    func setTotalAmt(totalAmt: Int) {
-        self.totalAmount = totalAmt
-    }
-    
-    //func gettotalAmt
-}
+//class Profile {
+//
+//    var name: String
+//
+//    var totalAmount: String
+//
+//    //var transactionArr: [Transaction]
+//
+//    init() {
+//        name = ""
+//        totalAmount = ""
+//        //transactionArr = [Transaction]()
+//    }
+//
+//    init(name: String, totalAmt: String) {
+//        self.name = name
+//        self.totalAmount = totalAmt
+//        //transactionArr = [Transaction]()
+//    }
+//
+////    func addDetails(amount: Int, detail: String) {
+////        if transactionArr.count > 0 {
+////            transactionArr[transactionArr.count-1].setAmt(amount: amount)
+////            transactionArr[transactionArr.count-1].setDetail(detail: detail)
+////        }else {
+////            transactionArr[0].setAmt(amount: amount)
+////            transactionArr[0].setDetail(detail: detail)
+////        }
+////    }
+//
+//    func getName() -> String {
+//        return name
+//    }
+//
+//    func getTotalAmt() -> String {
+//        return totalAmount
+//    }
+//
+//    func setName(name: String) {
+//        self.name = name
+//    }
+//
+//    func setTotalAmt(totalAmt: String) {
+//        self.totalAmount = totalAmt
+//    }
+//
+//}
