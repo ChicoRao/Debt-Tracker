@@ -42,6 +42,7 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         
         //Setting default button text (Default: others owe you)
         whoOwesWhoButton.setTitle("+", for: .normal)
+        whoOwesWhoButton.setTitleColor(UIColor(red: 0.251, green: 0.6275, blue: 0, alpha: 1), for: .normal)
         
         //For light mode
         overrideUserInterfaceStyle = .light
@@ -84,9 +85,11 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         
         if whoOwesWhoButton.currentTitle! == "+" {
             whoOwesWhoButton.setTitle("-", for: .normal)
+            whoOwesWhoButton.setTitleColor(UIColor.red, for: .normal)
             isPositive = false
         }else if whoOwesWhoButton.currentTitle! == "-" {
             whoOwesWhoButton.setTitle("+", for: .normal)
+            whoOwesWhoButton.setTitleColor(UIColor(red: 0.251, green: 0.6275, blue: 0, alpha: 1), for: .normal)
             isPositive = true
         }
     }
