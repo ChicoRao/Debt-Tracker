@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="2005.5999999999999" y="-351.72413793103448"/>
         </scene>
-        <!--Detail List-->
+        <!--Details View Controller-->
         <scene sceneID="b8b-qH-vuQ">
             <objects>
-                <viewController id="AbC-Kf-568" customClass="DetailList" customModule="DebtTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AbC-Kf-568" customClass="DetailsViewController" customModule="DebtTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="80s-CA-CmN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

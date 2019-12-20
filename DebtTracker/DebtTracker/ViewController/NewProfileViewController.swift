@@ -77,7 +77,7 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func occasionEditingChanged(_ sender: Any) {
-        //occasionEntered = occasionTextField.text!
+        occasionEntered = occasionTextField.text!
     }
     
     
@@ -102,44 +102,134 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        if occasionEntered == "" {
+            occasionEntered = "Occasion unknown"
+        }
+        
         print(nameEntered)
         print(amountEntered)
-        //print(occasionEntered)
+        print(occasionEntered)
         
         //Saves data to Core Data
-        save(name: nameEntered, amount: amountEntered)
+        save(name: nameEntered, amount: amountEntered, occasion: occasionEntered)
     
         nameTextField.text = ""
         amountField.text = "$0.00"
-        //occasionTextField.text = ""
+        occasionTextField.text = ""
     }
     
-    func save(name: String, amount: String) {
+    func save(name: String, amount: String, occasion: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
-        //1
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        //2
-        let entity = NSEntityDescription.entity(forEntityName: "Profile", in: managedContext)!
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Profile")
+
+        var result: [NSManagedObject] = []
         
+        do {
+            result = try managedContext.fetch(fetchRequest)    //fetching data from core data
+
+        } catch let error as NSError {
+            print("Cout not fetch. \(error), \(error.userInfo)")
+        }
+        
+        for data in result {
+            let mName = data.value(forKey: "name") as! String
+            if nameEntered == mName {
+                //Existing profile
+                
+                //Adding new detail
+                var tempResultArr = data.value(forKey: "detailList") as! DetailList
+                var tempDetailArr: [Detail] = []
+                
+                for element in tempResultArr.detailList {
+                    tempDetailArr.append(element)
+                }
+                
+                let newDetail = Detail(amount: amount, occasion: occasion)
+                tempDetailArr.append(newDetail)
+                
+                let newDetailList = DetailList(detailList: tempDetailArr)
+                data.setValue(newDetailList, forKeyPath: "detailList")
+                
+                //Updating total amount
+                //Removing "$" sign
+                var oldStringAmount = data.value(forKey: "totalAmount") as! String
+                oldStringAmount = oldStringAmount.replacingOccurrences(of: "$", with: "")
+                let newStringAmount = amountEntered.replacingOccurrences(of: "$", with: "")
+                
+                //New and old isPositive values
+                let oldIsPositive = data.value(forKey: "isPositive") as! Bool
+                let newIsPositive = isPositive
+                
+                //Converting from string to double
+                let oldDoubleAmount: Double = Double(oldStringAmount)!
+                let newDoubleAmount: Double = Double(newStringAmount)!
+
+                //Calculating total, should handle negative number cases too
+                var newTotalDoubleAmount: Double = 0
+                
+                if oldIsPositive == true && newIsPositive == true {
+                    newTotalDoubleAmount = oldDoubleAmount + newDoubleAmount
+                }else if oldIsPositive == true && newIsPositive == false {
+                    newTotalDoubleAmount = oldDoubleAmount - newDoubleAmount
+                }else if oldIsPositive == false && newIsPositive == false {
+                    newTotalDoubleAmount = (oldDoubleAmount + newDoubleAmount)*(-1.00)
+                }else if oldIsPositive == false && newIsPositive == true {
+                    newTotalDoubleAmount = newDoubleAmount - oldDoubleAmount
+                }
+                
+                //Convert back to string and store value (might need two isPositive value, one for detail, one for main profile list
+                if newTotalDoubleAmount >= 0 {
+                    isPositive = true
+                    let newTotalStringAmount = "$" + String(format: "%.02f", newTotalDoubleAmount)
+                    data.setValue(isPositive, forKeyPath: "isPositive")
+                    data.setValue(newTotalStringAmount, forKeyPath: "totalAmount")
+                }else {
+                    isPositive = false
+                    var newTotalStringAmount = String(format: "%.02f", newTotalDoubleAmount)
+                    newTotalStringAmount = "$" + newTotalStringAmount.replacingOccurrences(of: "-", with: "")
+                    data.setValue(isPositive, forKeyPath: "isPositive")
+                    data.setValue(newTotalStringAmount, forKeyPath: "totalAmount")
+                }
+                
+                do {
+                        try managedContext.save()
+                        print("Saving updated data to core data")
+
+                    } catch let error as NSError {
+                        print("Could not save. \(error), \(error.userInfo)")
+                    }
+            }
+            return
+        }
+        
+        //New Profile
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Profile", in: managedContext)!
         let profile = NSManagedObject(entity: entity, insertInto: managedContext)
         
-        //3
         profile.setValue(name, forKeyPath: "name")
         profile.setValue(amount, forKeyPath: "totalAmount")
         profile.setValue(isPositive, forKeyPath: "isPositive")
         
-        //4
+        var tempDetailArr: [Detail] = []
+        let newDetail = Detail(amount: amount, occasion: occasion)
+        tempDetailArr.append(newDetail)
+        let newDetailList = DetailList(detailList: tempDetailArr)
+        profile.setValue(newDetailList, forKeyPath: "detailList")
+        
         do {
             try managedContext.save()
-            print("Saving to core data")
+            print("Saving new profile data to core data")
             
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    
     }
     
 }

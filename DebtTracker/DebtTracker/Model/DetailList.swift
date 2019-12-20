@@ -9,24 +9,24 @@
 import Foundation
 
 public class DetailList: NSObject, NSCoding {
-    
+
     public var detailList: [Detail] = []
-    
+
     enum Key:String {
         case detailList = "detailList"
     }
-    
-    init(details: [Detail]) {
+
+    init(detailList: [Detail]) {
         self.detailList = detailList
     }
-    
+
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(detailList, forKey: Key.detailList.rawValue)
     }
-    
+
     public required convenience init?(coder aDecoder: NSCoder) {
         let mDetailList = aDecoder.decodeObject(forKey: Key.detailList.rawValue) as! [Detail]
-        
+
         self.init(detailList: mDetailList)
     }
 

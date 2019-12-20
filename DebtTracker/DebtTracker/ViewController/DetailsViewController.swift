@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DetailList: UIViewController {
+class DetailViewController: UIViewController {
     
     
     
