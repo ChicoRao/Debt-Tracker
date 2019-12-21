@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		415B845523AC8B3B0020DF64 /* DebtTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 415B845323AC8B3B0020DF64 /* DebtTracker.xcdatamodeld */; };
+		415B845723AD858B0020DF64 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B845623AD858B0020DF64 /* DetailCell.swift */; };
 		4164F59C23AC6FAC00D11789 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164F59B23AC6FAC00D11789 /* Detail.swift */; };
 		418EE82D23A1B24F00309BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE82C23A1B24F00309BD4 /* AppDelegate.swift */; };
 		418EE82F23A1B24F00309BD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE82E23A1B24F00309BD4 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		415B845423AC8B3B0020DF64 /* DebtTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DebtTracker.xcdatamodel; sourceTree = "<group>"; };
+		415B845623AD858B0020DF64 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		4164F59B23AC6FAC00D11789 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		418EE82923A1B24F00309BD4 /* DebtTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebtTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418EE82C23A1B24F00309BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				418EE87523A23C4900309BD4 /* ProfileCell.swift */,
+				415B845623AD858B0020DF64 /* DetailCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				418EE84E23A1B55B00309BD4 /* DetailList.swift in Sources */,
 				418EE87C23A3367100309BD4 /* DetailsViewController.swift in Sources */,
+				415B845723AD858B0020DF64 /* DetailCell.swift in Sources */,
 				415B845523AC8B3B0020DF64 /* DebtTracker.xcdatamodeld in Sources */,
 				4164F59C23AC6FAC00D11789 /* Detail.swift in Sources */,
 				418EE83123A1B24F00309BD4 /* ProfileList.swift in Sources */,

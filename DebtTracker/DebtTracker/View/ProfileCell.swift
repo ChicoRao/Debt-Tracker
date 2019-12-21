@@ -8,16 +8,20 @@
 
 import UIKit
 
+protocol ProfileCellDelegate {
+    func didTapDetail(name: String)
+}
 
 class ProfileCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var totalAmtLabel: UILabel!
     
-//    func setProfile(profile: Profile) {
-//        nameLabel.text = profile.getName()
-//        totalAmtLabel.text = "$" + String(profile.getTotalAmt())
-//    }
+    var delegate: ProfileCellDelegate?
+    
+    @IBAction func detailsTapped(_ sender: UIButton) {
+        print("Pressed detail button, starting the function delegate stuff")
+        delegate?.didTapDetail(name: nameLabel.text ?? "Unknown")
+    }
     
 }

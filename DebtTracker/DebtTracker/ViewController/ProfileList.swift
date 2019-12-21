@@ -47,6 +47,15 @@ class ProfileList: UIViewController {
     
 }
 
+extension ProfileList: ProfileCellDelegate {
+    func didTapDetail(name: String) {
+        let nameChosen = name
+        
+        UserDefaults.standard.set(nameChosen, forKey: "nameChosenForDetails")
+    }
+    
+}
+
 extension ProfileList: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,6 +79,8 @@ extension ProfileList: UITableViewDataSource, UITableViewDelegate {
             cell.totalAmtLabel?.textColor = UIColor.red //show red for what you owe others
             cell.totalAmtLabel?.text = "-" + (amount ?? "$0.00")
         }
+        
+        cell.delegate = self
         
         return cell
     }

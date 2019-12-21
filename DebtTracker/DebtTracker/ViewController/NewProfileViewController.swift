@@ -142,14 +142,22 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
                 //Existing profile
                 
                 //Adding new detail
-                var tempResultArr = data.value(forKey: "detailList") as! DetailList
+                let tempResultArr = data.value(forKey: "detailList") as! DetailList
                 var tempDetailArr: [Detail] = []
                 
                 for element in tempResultArr.detailList {
                     tempDetailArr.append(element)
                 }
                 
-                let newDetail = Detail(amount: amount, occasion: occasion)
+                var newAddedAmount: String = ""
+
+                if isPositive {
+                    newAddedAmount = "+" + amount
+                }else {
+                    newAddedAmount = "-" + amount
+                }
+                
+                let newDetail = Detail(amount: newAddedAmount, occasion: occasion)
                 tempDetailArr.append(newDetail)
                 
                 let newDetailList = DetailList(detailList: tempDetailArr)
@@ -177,7 +185,7 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
                 }else if oldIsPositive == true && newIsPositive == false {
                     newTotalDoubleAmount = oldDoubleAmount - newDoubleAmount
                 }else if oldIsPositive == false && newIsPositive == false {
-                    newTotalDoubleAmount = (oldDoubleAmount + newDoubleAmount)*(-1.00)
+                    newTotalDoubleAmount = 0 - oldDoubleAmount - newDoubleAmount
                 }else if oldIsPositive == false && newIsPositive == true {
                     newTotalDoubleAmount = newDoubleAmount - oldDoubleAmount
                 }
@@ -199,12 +207,12 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
                 do {
                         try managedContext.save()
                         print("Saving updated data to core data")
+                        return
 
                     } catch let error as NSError {
                         print("Could not save. \(error), \(error.userInfo)")
                     }
             }
-            return
         }
         
         //New Profile
@@ -216,8 +224,18 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         profile.setValue(amount, forKeyPath: "totalAmount")
         profile.setValue(isPositive, forKeyPath: "isPositive")
         
+        var tempAmount: String = ""
+        
+        if isPositive == true {
+            tempAmount = amount
+            tempAmount.insert("+", at: tempAmount.startIndex)
+        }else {
+            tempAmount = amount
+            tempAmount.insert("-", at: tempAmount.startIndex)
+        }
+        
         var tempDetailArr: [Detail] = []
-        let newDetail = Detail(amount: amount, occasion: occasion)
+        let newDetail = Detail(amount: tempAmount, occasion: occasion)
         tempDetailArr.append(newDetail)
         let newDetailList = DetailList(detailList: tempDetailArr)
         profile.setValue(newDetailList, forKeyPath: "detailList")
